@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="toDoList.css">
+    
+    <title>to do list</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Yk-to do list</a></li>
+            </ul>
+            <div>
+                    <button id="add-task-button">Add Task</button>
+                    <button onclick="clearCompleted()">Clear Completed</button>
+            </div>
+        </nav>
+        
+    </header>
+    <main>
+            <h1>My To Do List</h1>
+            <div id="task-list">
+            </div>
+            <br>
+            <h2>Completed Tasks: </h2>
+            <div id="completed-task-list">
+                
+            </div>
+        </div>
+    </main>
+      <div class="field" id="add-task-section">
+            <form id="add-task-form">
+                <p>add a new task</p>
+                <label for="task-input">New Task: </label>
+                <input type="text" id="task-input" name="task-input" placeholder="Add a new task">
+                <label for="task-description">Description: </label>
+                <textarea id="task-description" name="task-description" placeholder="Add a task description"></textarea>
+                <label for="task-priority">Priority: </label>
+                <select id="task-priority" name="task-priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <label for="task-start-date">Start Date: </label>
+                <input type="date" id="task-start-date" name="task-start-date">
+                <label for="task-end-date">End Date: </label>
+                <input type="date" id="task-end-date" name="task-end-date">
+                <button type="submit" onclick="removeBlur()">Add Task</button>
+            </form>
+        </div>
+    <script src="toDoList.js"></script>
+</body>
+</html>
